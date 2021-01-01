@@ -6491,7 +6491,7 @@ input, select, textarea {
 			width: 15%;
 			margin: 7px;
 			border-radius: 10px;
-			max-height: 200px;
+			/* max-height: 200px; */
 
 		}
 
@@ -6878,6 +6878,9 @@ input, select, textarea {
 			overflow: hidden;
 			width: 22.5rem;
 			max-width: 75vw;
+			width: 20rem;
+			max-width: 75vw;
+			margin-right: 15px;
 		}
 
 			.gallery.style2 article .image {

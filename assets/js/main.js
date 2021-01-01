@@ -150,6 +150,58 @@
 			.children()
 				.wrapInner('<div class="inner"></div>');
 
+				let photo_content = [
+					"",
+					"Namaste _/\_ from Shree Virupaksha Temple, Hampi",
+					"Smile, because its Hampi... Happy Hampi :D",
+					"First Solo - Palampur",
+					"Asia's highest bridge at staggering height of 13596 ft at Chicham, Spiti Valley",
+					"Charminar(Four Minarets), Hydrabad",
+					"Diu Island",
+					"Comeback after a hiatus",
+					"Baby Goku",
+					"No more a dilettante painter",
+					"Wallflower",
+					"Deva!",
+					"Can you read me from my eyes?",
+					"Best feeling - when a kid hugs you :D",
+					"Just another fun Sunday spent teaching kids",
+					"Good byes are hard, but do them with a smile.",
+					"The pretty lady showed me the handmade card she made for her friend.",
+					"Smile :)",
+					"You can do amazing things with a simpe dough of clay",
+					"At anti-begging campaign",
+					"Meet Lakshmi from Rajpura",
+					"The best batch",
+					"1st Anniversery of our initiative",
+					"Suppoters at anti-begging campaign",
+					"Painting the bridges of patiala to spread awareness on mensuration and health",
+					"Things I like to do",
+					"Because workstation needs to have some life",
+					"An attempt to learn the art of pottery",
+					"...",
+					"When I started making miniature arts",
+					"Self Portrait, Self Love",
+					"Meditating before zip-lining",
+					"Cold desert mountain valley - Spiti - 1",
+					"Cold desert mountain valley - Spiti - 2",
+					"Cold desert mountain valley - Spiti - 3",
+					"Cold desert mountain valley - Spiti - 4",
+					"Hello from the world's highest post office (Hikkim)",
+					"Colors of an Indian wedding",
+					"Metamorphosis to Santa",
+					"Holi Hai!!!",
+					"Team Hackers",
+					"Team Kalam",
+					"Leading an ACM event(Flipped) at Chitkara University",
+				]
+				let gallery_html = "";
+				for(let i=1; i<=42; i++){
+					gallery_html = gallery_html + '<article><a href="images/gallery/fulls/'+i+'.jpg" class="image"><img src="images/gallery/thumbs/'+i+'.jpg" alt="" /></a><div class="caption"><p>'+ photo_content[i] +'</p></div></article>';
+				}
+				$("#non-work-life").html(gallery_html);
+
+
 	// Gallery.
 		$('.gallery')
 			.wrapInner('<div class="inner"></div>')
