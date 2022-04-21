@@ -1,150 +1,251 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Vandana Munjal</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Vinni's Portfolio</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<!-- <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,600&display=swap" rel="stylesheet"> -->
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap" rel="stylesheet">
+	<style>
+		.container {
+			background-image: url(images/bg.png);
+			width: 100%;
+			height: 98vh;
+			background-position: bottom;
+			display: flex;
+			/* justify-content: center; */
+			/* flex-direction: column; */
+			font-family: 'Roboto', sans-serif;
+			text-align: center;
+		}
+		.base-timer {
+			position: relative;
+			width: 150px;
+			height: 150px;
+		}
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="divided">
+		.base-timer__svg {
+			transform: scaleX(-1);
+		}
 
-				<!-- One -->
-					<section class="banner onload-image-fade-in onload-content-fade-right style3 fullscreen orient-right content-align-left image-position-center">
-						<div class="content">
-							<h1>Hi There!</h1>
-							<!-- <div>Aspiring Product Designer</div> -->
-							<p class="major">Vandana this side(<i>an aspiring product designer</i>), straight from India to pursue Masters in Human Computer Interaction and Design at IUPUI. 
-							</p>
-							<p class="major">My vision is to be an industry design leader who can build teams that are known for creating aesthetically pleasing, efficient, and easy to operate products. My goal is to simplify the complexity of a product without losing a single ounce of its useful functionality.</p>
-							<ul class="actions stacked">
-								<li><a href="#first" class="button big wide smooth-scroll-middle">Design Stories</a></li>
-							</ul>
-						</div>
-						<div class="image">
-							<img src="images/banner.jpg" alt="" />
-						</div>
-					</section>
+		.base-timer__circle {
+			fill: none;
+			stroke: none;
+		}
 
-					
-				<!-- Four -->
-					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="first">
-						<div class="content">
-							<h2>From pasta to paradox of choice</h2>
-							<p>
-								... which one is spicy, I thought to myself. Peri Peri is supposed to be spicy but here it says it's a white sauce pasta but white is supposed to be creamy. Now which is the spicy one among them ...
-							</p>
-							<ul class="actions stacked">
-								<li><a target="_blank" href="https://vandana-munjal.medium.com/from-a-pasta-to-paradox-of-choice-635ee7fe1c04" class="button">Read</a></li>
-							</ul>
-						</div>
-						<div class="image">
-							<img src="images/01.png" alt="" />
-							<div>Credits: absurd.design</div>
-						</div>
-					</section>
+		.base-timer__path-elapsed {
+			stroke-width: 7px;
+			stroke: grey;
+		}
 
-				<!-- Two -->
-					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" >
-						<div class="content">
-							<h2>The Road Not Taken — Help users to take the right path</h2>
-							<p>... they ended up choosing the wrong road. This poem hit a lot of people deep because of the hard truth it carries for the choices ...</p>
-							<ul class="actions stacked">
-								<li><a href="https://vandana-munjal.medium.com/the-road-not-taken-help-users-to-take-the-right-path-bd8172bb6b1" target="_blank" class="button">Read</a></li>
-							</ul>
-						</div>
-						<div class="image">
-							<img src="images/04.png" alt="" />
-							<div>Credits: absurd.design</div>
-						</div>
-					</section>
+		.base-timer__path-remaining {
+			stroke-width: 7px;
+			stroke-linecap: round;
+			transform: rotate(90deg);
+			transform-origin: center;
+			transition: 1s linear all;
+			fill-rule: nonzero;
+			stroke: currentColor;
+		}
 
-					<!-- Four -->
-					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" >
-						<div class="content">
-							<h2>Do you know why water can cut a rock?</h2>
-							<p>... It was the first time I looked at Slate. Well, In the session I was just listening without much/any input. We were asked to give some thought on this ...</p>
-							<ul class="actions stacked">
-								<li><a href="https://vandana-munjal.medium.com/why-water-can-cut-a-rock-a-redesign-tale-part-i-6111b4516141" target="_blank" class="button">Read</a></li>
-							</ul>
-						</div>
-						<div class="image">
-							<img src="images/02.png" alt="" />
-							<div>Credits: absurd.design</div>
-						</div>
-					</section>
+		.base-timer__path-remaining.green {
+			/* color: rgb(65, 184, 131); */
+			color: white;
+		}
 
-				<!-- Three -->
-					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
-						<div class="content">
-							<h2>Before God, we are all equally wise, and equally foolish</h2>
-							<p>... things that users never complain about. These things will never let the user fall in love with your product. Bear in mind, these things will be your worst enemy ...</p>
-							<ul class="actions stacked">
-								<li><a href="https://docs.google.com/document/d/e/2PACX-1vT_kvEMPdYW6lYYI-SvkMFmgiHdlqfykXdJCWNqOH_ODYPj5PlLIIKKseLkDZT7TTbBJvNWX3FzWrWC/pub" target="_blank" class="button">Read</a></li>
-							</ul>
-						</div>
-						<div class="image">
-							<img src="images/03.png" alt="" />
-							<div>Credits: absurd.design</div>
-						</div>
-					</section>
+		.base-timer__path-remaining.orange {
+			/* color: orange; */
+			color: white;
 
-					
+		}
 
-				<!-- Four -->
-					<!-- <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
-						<div class="content">
-							<h2>"Cancel - Ok"  or  "Ok - Cancel" - What should be correct placement of primary and secondary actions?</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
-							<ul class="actions stacked">
-								<li><a href="#" class="button">Read</a></li>
-							</ul>
-						</div>
-						<div class="image">
-							<img src="images/spotlight03.jpg" alt="" />
-						</div>
-					</section> -->
+		.base-timer__path-remaining.red {
+			/* color: red; */
+			color: white;
 
-				<!-- Five -->
-					<section class="wrapper style1 align-center">
-						<div class="inner">
-							<h2>Shots from my non-work life</h2>
-							<p>I don't have a particular hobbie or interest. I like to do a lot of things and trying new things is on the top of all.</p>
-						</div>
-						<!-- Gallery -->
-							<div id="non-work-life" class="gallery style2 medium lightbox onscroll-fade-in"></div>
+		}
 
-					</section>
+		.base-timer__label {
+			position: absolute;
+			width: 150px;
+			height: 150px;
+			top: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 30px;
+		}
+		.app-counter-frame{
+			/* display: flex; */
+			justify-content: center;
+		}
+		span#base-timer-label {
+			background: black;
+			/* width: 100px; */
+			/* height: 100px; */
+			display: inline-block;
+			color: white;
+			padding: 10px;
+			border-radius: 20px;
+		}
+		.inner {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			text-align: left;
+			margin-left: auto;
+			margin-right: 5rem;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div></div>
+		<div class="inner">
+			<h1 id="headline">Vinni's Portfolio has found a new home</h1>
+			<h2>You will be directed to new address in...</h2>
+			<span id="app" class=""></span>
+		</div>
+		
+	   
+	   
+	  </div>
+</body>
 
-				<!-- Footer -->
-					<footer class="wrapper style1 align-center">
-						<div class="inner">
-							<ul class="icons">
-								<li><a target="_blank" href="https://www.instagram.com/munjalvandana/" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a target="_blank" href="https://vandana-munjal.medium.com/" class="icon brands style2 fa-medium-m"><span class="label">Medium</span></a></li>
-								<li><a target="_blank" href="https://www.linkedin.com/in/vandanamunjal/" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-								<li><a target="_blank" href="mailto:vandana.munjal2@gmail.com" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
-							</ul>
-						</div>
-					</footer>
 
-			</div>
+<script>
+	// Credit: Mateusz Rybczonec
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script type="text/javascript">
-				$(document).ready(function(){
-				});
-			</script>
 
-	</body>
+setTimeout(function(){
+	location.assign('https://www.vinnikeepingitsimple.design/');
+}, 5000);
+
+const FULL_DASH_ARRAY = 283;
+const WARNING_THRESHOLD = 10;
+const ALERT_THRESHOLD = 5;
+
+const COLOR_CODES = {
+  info: {
+    color: "green"
+  },
+  warning: {
+    color: "orange",
+    threshold: WARNING_THRESHOLD
+  },
+  alert: {
+    color: "red",
+    threshold: ALERT_THRESHOLD
+  }
+};
+
+const TIME_LIMIT = 5;
+let timePassed = 0;
+let timeLeft = TIME_LIMIT;
+let timerInterval = null;
+let remainingPathColor = COLOR_CODES.info.color;
+
+// document.getElementById("app").innerHTML = `
+// <div class="base-timer">
+//   <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+//     <g class="base-timer__circle">
+//       <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+//       <path
+//         id="base-timer-path-remaining"
+//         stroke-dasharray="283"
+//         class="base-timer__path-remaining ${remainingPathColor}"
+//         d="
+//           M 50, 50
+//           m -45, 0
+//           a 45,45 0 1,0 90,0
+//           a 45,45 0 1,0 -90,0
+//         "
+//       ></path>
+//     </g>
+//   </svg>
+//   <span id="base-timer-label" class="base-timer__label">${formatTime(
+//     timeLeft
+//   )}</span>
+// </div>
+// `;
+
+if(timeLeft){
+	document.getElementById("app").innerHTML = `
+  	<span id="base-timer-label" >${formatTime(
+    	timeLeft
+  	)}</span>
+	`;
+}
+
+startTimer();
+
+function onTimesUp() {
+  clearInterval(timerInterval);
+}
+
+function startTimer() {
+  timerInterval = setInterval(() => {
+    timePassed = timePassed += 1;
+    timeLeft = TIME_LIMIT - timePassed;
+    document.getElementById("base-timer-label").innerHTML = formatTime(
+      timeLeft
+    );
+    setCircleDasharray();
+    setRemainingPathColor(timeLeft);
+
+    if (timeLeft === 0) {
+      onTimesUp();
+    }
+  }, 1000);
+}
+
+function formatTime(time) {
+  const minutes = Math.floor(time / 60);
+  let seconds = time % 60;
+
+  if (seconds < 10) {
+    seconds = `0${seconds}`;
+  }
+
+  return `${minutes}:${seconds}`;
+}
+
+function setRemainingPathColor(timeLeft) {
+  const { alert, warning, info } = COLOR_CODES;
+  if (timeLeft <= alert.threshold) {
+    document
+      .getElementById("base-timer-path-remaining")
+      .classList.remove(warning.color);
+    document
+      .getElementById("base-timer-path-remaining")
+      .classList.add(alert.color);
+  } else if (timeLeft <= warning.threshold) {
+    document
+      .getElementById("base-timer-path-remaining")
+      .classList.remove(info.color);
+    document
+      .getElementById("base-timer-path-remaining")
+      .classList.add(warning.color);
+  }
+}
+
+function calculateTimeFraction() {
+  const rawTimeFraction = timeLeft / TIME_LIMIT;
+  return rawTimeFraction - (1 / TIME_LIMIT) * (1 - rawTimeFraction);
+}
+
+function setCircleDasharray() {
+  const circleDasharray = `${(
+    calculateTimeFraction() * FULL_DASH_ARRAY
+  ).toFixed(0)} 283`;
+  document
+    .getElementById("base-timer-path-remaining")
+    .setAttribute("stroke-dasharray", circleDasharray);
+}
+
+</script>
+
 </html>
