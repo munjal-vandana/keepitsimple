@@ -1,6 +1,8 @@
 ## Personal Portfolio - Vandana Munjal
 Aspiring Product Designer
 
-I'm a software engineer by degree and, designer by interest and doodler for fun.
+It is me, Vandana, aka Vinni - your friendly neighborhood product designer. Hailing all the way from India, on a mission to discover the wonders of User Experience Design and Research.
+
+As an artist&engineer, I paint, doodle, do embroidery, macrame, know pottery, and can build a backend/frontend and manage the entire product lifecycle.
 
 My portfolio has found a new place at https://www.vinnikeepingitsimple.design/
