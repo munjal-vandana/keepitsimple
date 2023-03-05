@@ -1,5 +1,5 @@
 ## Personal Portfolio - Vandana Munjal
-Aspiring Product Designer
+User Experience/ Product Designer
 
 It is me, Vandana, aka Vinni - your friendly neighborhood product designer. Hailing all the way from India, on a mission to discover the wonders of User Experience Design and Research.
 
